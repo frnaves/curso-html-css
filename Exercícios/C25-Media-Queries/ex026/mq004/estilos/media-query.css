@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+/*Demais Mídias */
+
+
+/* Typical Device Breakpoints*/
+
+
+
+/* Telas Médias (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body{
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+
+}
+
+/* Desktops (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+
+}
+
+
+
+/* Telas Grandes (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1440px) {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
+
+}
+
+
+@media print{
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    body{
+        background-image: url(../imagens/back-print.jpg); /*desnecessário pois n imprime backgroud*/
+
+    }
+    main{
+        width: 90vw;
+        border:  2px solid black;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+
+    main::after{
+        content: 'Essa impressão foi feita através do site curso em video';
+        text-decoration: overline;
+    }
+
+
+}
