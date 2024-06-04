@@ -43,7 +43,7 @@ menu > ul{
     list-style-type: none;
 }
 
-menu a{
+menu a {
     display: block;
     padding: 10px;
     text-decoration: none;
